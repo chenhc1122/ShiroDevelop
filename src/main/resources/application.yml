@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/ensbrain?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenLogStatsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnRerurn: false
+    poolPreparedStatements: ture
+
+    filter: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: ture
+    ConnectionProperties: druid.stat.mergeSql=ture;druid.stat.slowSqlMillis=500
+
+
+mybatis:
+  type-aliases-package: com.yqz.shiromybatis.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+

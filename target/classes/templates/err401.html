@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/ban_error.css}">
+</head>
+<body>
+    <a class="error_page" >
+        <img th:src="@{/images/403.png}" alt="error">
+        <div class="error_info">
+          <div class="error_tips">401</div>
+          <div class="error_sub_tips">抱歉，未授权！</div>
+        </div>
+        <!-- <div class="top">易安联安众</div> -->
+    </a>
+</body>
+<script>
+   function goBack() {
+    history.go(-1);
+  }
+
+  function refresh() {
+    window.location.reload();
+  }
+</script>
+</html>
