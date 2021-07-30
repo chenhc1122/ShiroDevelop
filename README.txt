@@ -1,1 +1,1 @@
-shiro集成mybatis
+shiro集成mybatis+角色授权
